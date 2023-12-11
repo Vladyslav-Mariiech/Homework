@@ -1,0 +1,8 @@
+const days = 7;
+const hours = 24;
+const minutes = 1440;
+const seconds = 86400;
+const inHours7d = hours * days;
+const inMinutes7d = minutes * days;
+const inSeconds7d = seconds * days; 
+console.log(inHours7d,inMinutes7d,inSeconds7d)
