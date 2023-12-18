@@ -1,0 +1,57 @@
+//task 1
+let number = 124;
+function getReversedNumber (number) {
+ let result = 0;
+ while (number){
+ result = result * 10 + number % 10;
+ number = Math.floor(number / 10);
+}
+return  result
+}
+
+console.log (getReversedNumber(number))
+
+//task 2
+
+const distance = Math.floor(Math.random()*412+1);
+const time = Math.floor(Math.random()*24+1);
+const speed = distance / time;
+
+
+console.log (speed) 
+
+
+
+//task 4
+{
+const number = Math.floor(Math.random()*7+1);
+
+if(number === 1){
+	console.log('Red');
+}else{
+	if(number === 2) console.log('Orange');
+	if(number === 3) console.log('Yellow');
+	if(number === 4) console.log('Green');
+  if(number === 5) console.log('Blue');
+  if(number === 6) console.log('Indigo');
+  if(number === 7) console.log('Violet');
+}
+}
+
+//task 5
+{
+const number = Math.floor(Math.random() * 20 + 1);
+
+for (let x = 2; x <= 9; x++) {
+    const result = x * number;
+    console.log(`${number} * ${x} = ${result}`);
+}
+}
+
+//task 6
+{
+for (let i = 10; i >= 1; i--) {
+    const result = '*'.repeat(i);
+    console.log(result);
+}
+}
