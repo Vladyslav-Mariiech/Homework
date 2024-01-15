@@ -1,0 +1,53 @@
+//task 1
+let height = Math.random() * 55 + 1 ; 
+let diameter = Math.random() * 15 + 1 ; 
+
+let radius = diameter / 2;
+
+let volume = Math.PI * Math.pow(radius, 2) * height;
+
+console.log("Сylinder Volume: " + volume.toFixed(2) );
+
+
+
+//task 2
+let randomDay = Math.floor(Math.random() * 7) + 1 ;
+
+let  dayofweek;
+switch(randomDay){
+
+case 1:
+ dayofweek = ("Monday");
+break
+case 2:
+ dayofweek = ("Tuesday");
+break
+case 3:
+ dayofweek = ("Wednesday");
+break
+case 4:
+ dayofweek = ("Thursday");
+break
+case 5:
+ dayofweek = ("Friday");
+break 
+case 6:
+ dayofweek = ("Saturday");
+break
+case 7:
+ dayofweek = ("Sunday");
+break
+}
+
+console.log("Random Day: " + dayofweek);
+
+
+//task 3
+let digit1 = Math.floor(Math.random() * 10);
+let digit2 = Math.floor(Math.random() * 10);
+let digit3 = Math.floor(Math.random() * 10);
+let digit4 = Math.floor(Math.random() * 10);
+
+let pinCode = "" + digit1 + digit2 + digit3 + digit4;
+
+console.log("PinCode:" + pinCode);
