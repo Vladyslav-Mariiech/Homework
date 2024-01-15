@@ -20,7 +20,16 @@ const speed = distance / time;
 
 console.log (speed) 
 
+//task 3
+let operatorCode = Math.floor(Math.random() * 90) + 10;
 
+let phoneNumberPart1 = Math.floor(Math.random() * 1000);
+let phoneNumberPart2 = Math.floor(Math.random() * 100);
+let phoneNumberPart3 = Math.floor(Math.random() * 100);
+
+let phoneNumber = "+38 (0" + operatorCode + ") " + phoneNumberPart1 + "-" + phoneNumberPart2 + "-" + phoneNumberPart3;
+
+console.log("telephon number: " + phoneNumber);
 
 //task 4
 {
