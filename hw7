@@ -1,0 +1,52 @@
+//task1
+
+function sumTo(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(sumTo(10));
+
+//task2
+
+function fib(n) {
+  let a = 11;
+  let b = 11;
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+
+console.log(fib(2)); 
+
+//task 3
+
+function min(a, b) {
+  return a < b ? a : b;
+}
+
+console.log(min(4,2));
+
+//task 4
+
+function pow(x, n) {
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+let base = 2;
+let exponent = 4;
+let result = pow(base, exponent);
+
+console.log(result);
