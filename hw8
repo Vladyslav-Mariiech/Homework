@@ -1,0 +1,74 @@
+//task 1
+
+const sp1 = 'Jordan';
+const sp2 = 'Michael';
+const sp3 = 'NewYear';
+
+
+
+console.log(sp1[3]);
+console.log(sp2[7]);
+console.log(sp3.slice(-1));
+
+//task 2
+
+
+let array1 = 'a, b, c';
+let array2 = 'd, f, g';
+let newArray = array1 + ', ' + array2;
+console.log(newArray);
+let array3 = "Hello" + " " + "World";
+console.log(array3);
+
+//task 3
+
+
+function repeatString(str, count) {
+  let result = '';
+  for (let i = 0; i < count; i++) {
+    result += str;
+  }
+  return result;
+}
+
+let repeatedString = repeatString("Goal ", 3);
+console.log(repeatedString);
+
+//task 4
+
+let x = "The weather is brilliant.";
+
+
+let words = x.split(/\s+/);
+
+
+let shortestWord = words[0];
+
+
+for (let i = 1; i < words.length; i++) {
+    if (words[i].length < shortestWord.length) {
+        shortestWord = words[i];
+    }
+}
+
+console.log(shortestWord); 
+
+//task 5 
+/**
+ * @param {string} sentence
+ * @return {boolean}
+ */
+    
+let checkIfPangram = function(sentence) {
+    
+    if(sentence.length<26)
+    return false;
+
+   let distinctLetters= new Set (sentence); 
+  
+   if(distinctLetters.size<26)
+   return false;
+   else 
+   return true;
+};
+// https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/ 
