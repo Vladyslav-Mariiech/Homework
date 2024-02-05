@@ -1,0 +1,97 @@
+//task 1
+const maleNames = [
+  "James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph",
+  "Charles", "Thomas", "Christopher", "Daniel", "Matthew", "Anthony", "Mark",
+  "Donald", "Steven", "Paul", "Andrew", "Joshua", "Kenneth", "Kevin", "Brian",
+  "George", "Timothy", "Ronald", "Edward", "Jason", "Jeffrey", "Ryan", "Jacob",
+  "Gary", "Nicholas", "Eric", "Stephen", "Jonathan", "Larry", "Justin", "Scott",
+  "Brandon", "Benjamin", "Samuel", "Gregory", "Alexander", "Frank", "Patrick",
+  "Raymond", "Jack", "Dennis", "Jerry"
+];
+const femaleNames = [
+  "Mary", "Patricia", "Jennifer", "Linda", "Elizabeth", "Barbara", "Susan",
+  "Jessica", "Sarah", "Karen", "Nancy", "Lisa", "Margaret", "Betty", "Sandra",
+  "Ashley", "Dorothy", "Kimberly", "Emily", "Donna", "Michelle", "Carol",
+  "Amanda", "Melissa", "Deborah", "Stephanie", "Rebecca", "Laura", "Sharon",
+  "Cynthia", "Kathleen", "Helen", "Amy", "Shirley", "Angela", "Anna", "Brenda",
+  "Pamela", "Nicole", "Samantha", "Katherine", "Emma", "Ruth", "Olivia",
+  "Alicia", "Alexis", "Sarah", "Elaine", "Virginia", "Megan"
+];
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomAge() {
+  return getRandomInt(1, 100);  
+}
+
+function generateRandomUser(gender) {
+  let name;
+  if (gender === "male") {
+    name = maleNames[getRandomInt(0, maleNames.length - 1)];
+  } else if (gender === "female") {
+    name = femaleNames[getRandomInt(0, femaleNames.length - 1)];
+  } else {
+    return {
+      error: "undefined"
+    };
+  }
+
+
+
+  return {
+    name: name,
+    gender: gender,
+		age: getRandomAge()
+  };
+}
+
+
+console.log(generateRandomUser("male"));
+console.log(generateRandomUser("female"));
+
+
+//Task2
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var getConcatenation = function(nums) {
+    return [...nums , ...nums]
+};
+//https://leetcode.com/problems/concatenation-of-array/description/
+
+//Task3
+
+//Task4
+var kidsWithCandies = function(candies, extraCandies) {
+    let ans = Array(candies.length).fill(false);
+    let max = Math.max(...candies)
+    for (let i = 0; i < candies.length; i++) {
+        if (candies[i] + extraCandies >= max) ans[i] = true;
+    }
+    return ans;
+};
+//https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
+
+//Task5
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let number = 0;
+    
+    for(let i=0; i < nums.length; i++) {
+        if(nums[i] !==0) {
+            const temp = nums[number];
+            nums[number] = nums[i];
+            nums[i] = temp;
+            number++;
+        }
+    }
+};
+//https://leetcode.com/problems/move-zeroes/description/
