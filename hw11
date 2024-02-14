@@ -1,0 +1,31 @@
+//Task1(.find)
+const array = [5, 12, 8, 130, 44];
+
+const findNumber = array.find(function(number) {
+  return number > 10;
+});
+
+console.log(findNumber);
+
+//(.findIndex)
+let numberIndex = array.findIndex((array) => {
+  return array > 10;
+});
+
+console.log(numberIndex);
+
+//(.findLast) 
+let numberFindLast = array.findLast((array) => {
+ return array > 45
+});
+
+console.log(numberFindLast);
+
+//(.every)
+let numberEvery = array.every((array) => {
+	return array >= 2;
+});
+
+console.log(numberEvery);
+
+//task 2
