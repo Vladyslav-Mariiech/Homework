@@ -29,3 +29,23 @@ let numberEvery = array.every((array) => {
 console.log(numberEvery);
 
 //task 2
+
+/**
+ * @param {string[]} words
+ * @param {character} x
+ * @return {number[]}
+ */
+var findWordsContaining = function(words, x) {
+   let word = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].includes(x)) {
+            word.push(i);
+        }
+    }
+    return word;
+};
+
+//https://leetcode.com/problems/find-words-containing-character/description/
+
+
+
