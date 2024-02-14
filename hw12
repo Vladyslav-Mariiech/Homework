@@ -1,0 +1,39 @@
+//task 5
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === target) {
+            return i; 
+        } else if (nums[i] > target) {
+            return i; 
+        }
+    }
+    return nums.length;
+};
+
+//https://leetcode.com/problems/search-insert-position/description/
+
+//task 6
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+ for(let i = digits.length - 1; i >= 0; i--){
+     digits[i]++; 
+    if(digits[i] > 9){
+        digits[i] = 0;
+    }else{
+    return digits;
+    }
+}
+digits.unshift(1);
+return digits;
+};
+
+//https://leetcode.com/problems/plus-one/description/
