@@ -1,3 +1,41 @@
+//task1
+const array = [5, 12, 8, 130, 44];
+
+ Array.prototype.myPush = function(target) {
+    return this.push(target);
+};
+
+let myPushResult = array.myPush(24); 
+
+console.log(array); 
+
+//task2
+Array.prototype.myPop = function(target) {
+		return this.pop(target);
+};
+
+let myPopResult = array.myPop();
+
+console.log(myPopResult);
+
+//task3
+Array.prototype.myShift = function(target) {
+		return this.shift(target);
+};
+
+let myShiftResult = array.myShift();
+
+console.log(array);
+ 
+//task4
+Array.prototype.myUnshift = function(target) {
+		return this.unshift(target);
+};
+
+let myUnshiftResult = array.myUnshift(1);
+
+console.log(array); 
+
 //task 5
 /**
  * @param {number[]} nums
