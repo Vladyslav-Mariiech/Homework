@@ -1,0 +1,61 @@
+//task1
+const array = [5, 12, 8, 130, 44];
+ 
+ Array.prototype.myFind = function (target) {
+    return this.find(function (number) {
+      return number > target;
+   });
+ };
+
+const findNumber = array.myFind(13);
+
+console.log(findNumber);
+
+Array.prototype.myFindIndex = function(target) {
+ 		return this.findIndex(function (number) {
+			return number > target;
+	});
+};
+
+const findIndex = array.myFindIndex(10)
+console.log(findIndex);
+
+Array.prototype.myNumberFindLast = function(target) {
+		return this.findLast(function (number){
+			return number > target;
+	});
+};
+
+const myFindLast = array.myNumberFindLast(55);
+
+console.log(myFindLast);
+
+Array.prototype.myEvery = function(target) {
+		return this.every(function (number) {
+			return number >= target;
+	});
+};
+
+let myEvery = array.myEvery(4);
+
+console.log(myEvery);
+
+
+//task 2
+
+/**
+ * @param {string[]} words
+ * @param {character} x
+ * @return {number[]}
+ */
+var findWordsContaining = function(words, x) {
+   let word = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].includes(x)) {
+            word.push(i);
+        }
+    }
+    return word;
+};
+
+//https://leetcode.com/problems/find-words-containing-character/description/
