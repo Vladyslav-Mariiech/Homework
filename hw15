@@ -1,0 +1,38 @@
+//task1
+class Marker {
+  constructor(color, inkAmount) {
+    this.color = color;
+    this.inkAmount = inkAmount; 
+  }
+
+  
+  print(text) {
+    let printedText = '';
+    for (const front of text) {
+      if (this.inkAmount <= 0) {
+        console.log(`Недостаточно чернил для печати.`);
+        break;
+      }
+      if (front !== ' ') {
+        this.inkAmount -= 0.5;
+        printedText += front;
+      } else {
+        printedText += front; 
+      }
+    }
+
+    console.log(`Цвет: ${this.color}. Текст: ${printedText}`);
+  }
+
+
+  refill(percentage) {
+    this.inkAmount = Math.min(100, this.inkAmount + percentage);
+    console.log(`Чернила filled. Количество чернил: ${this.inkAmount}%`);
+  }
+}
+
+
+const myMarker = new Marker('Blue', 10); 
+myMarker.print("Hello world! How are you? Today is a good day."); 
+myMarker.refill(100); 
+myMarker.print("Hello world! How are you? Today is a good day.");
