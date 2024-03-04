@@ -1,0 +1,102 @@
+//task1 Завдання 1: Створення Класу і Об'єктів
+class Person {
+    constructor(name, age, city){
+        this.age = age;
+        this.name = name;
+        this.city = city;
+    }
+    showInfo() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}`);
+    }
+}
+
+const person1 = new Person("John", 30, "London");
+person1.showInfo();
+const person2 = new Person("Kate", 26, "Manchester");
+person2.showInfo();
+
+//task2 Завдання 2: Наслідування
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+    
+    showInfo() {
+        console.log(`Color: ${this.color}`);
+    }
+}
+
+class Rectangle extends Shape {
+    constructor(color, width, height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+    
+    calculateArea() {
+        return this.width * this.height;
+    }
+}
+
+class Circle extends Shape {
+    constructor(color, radius) {
+        super(color);
+        this.radius = radius;
+    }
+    
+    calculateArea() {
+        return Math.PI * Math.pow(this.radius, 2);
+    }
+}
+
+
+const rectangle = new Rectangle("blue", 12, 24);
+rectangle.showInfo();
+console.log(`Площадь прямоугольника: ${rectangle.calculateArea()}`);
+
+
+const circle = new Circle("red", 11);
+circle.showInfo();
+console.log(`Площадь круга: ${circle.calculateArea()}`);
+
+//task3 Завдання 3: Інкапсуляція та Методи
+
+class BankAccount {
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.balance = balance;
+  }
+
+  showInfo() {
+    console.log(`Owner: ${this.owner}, Balance: ${this.balance}`);
+  }
+  deposit(total) {
+    if (total > 0) {
+      this.balance += total;
+      console.log(`Депозит на сумму ${total} успешно выполнен.`);
+    } else {
+      console.log("Сумма депозита должна быть положительной.");
+    }
+  }
+
+  // Метод для снятия средств
+  withdraw(total) {
+    if (total > 0 && total <= this.balance) {
+      this.balance -= total;
+      console.log(`Снятие на сумму ${total} успешно выполнено.`);
+    } else {
+      console.log("Недостаточно средств на счете.");
+    }
+  }
+}
+
+const account = new BankAccount("Vladyslav", 1000);
+
+account.deposit(500);
+account.deposit(-200); // Попытка снять отрицательную сумму
+
+account.withdraw(200);
+account.withdraw(1500); // Попытка снять больше, чем есть на счете
+
+account.showInfo();
+
