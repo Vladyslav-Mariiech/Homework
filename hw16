@@ -79,7 +79,7 @@ class BankAccount {
     }
   }
 
-  // Метод для снятия средств
+  
   withdraw(total) {
     if (total > 0 && total <= this.balance) {
       this.balance -= total;
